@@ -4,7 +4,10 @@ import Bulb from './Bulb'
 const TrafficLight = ({data, light}) => {
   // console.log('TrafficLight-props', data, light)
   const bulbs = data.map((bulb, index) => (
-    <Bulb data={bulb} light={light} key={index}/>
+    <Bulb 
+      data={bulb} 
+      light={light} 
+      key={index}/>
     )
   )
   return (

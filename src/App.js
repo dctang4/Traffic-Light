@@ -7,9 +7,15 @@ import TrafficLight from "./TrafficLight";
 export default function App() {
   const [bulbOn, setBulbOn] = useState({id: 'bulb', color: 'black'})
   // console.log('App-bulbOn', bulbOn)
+
+  const handleControl = (bulb) => {
+    setBulbOn(bulb)
+  }
+
   const controlPanel = bulbData.map((bulb, index) => (
     <h2
-      onClick={() => setBulbOn(bulb)}
+      onClick={() => handleControl(bulb)}
+      // onClick={() => setBulbOn(bulb)}
       className="button"
       id={bulb.id}
       key={index}
